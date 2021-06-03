@@ -1,0 +1,16 @@
+<div class="container text-center">
+    <img src="../../assets/signup.png" alt="" />
+</div>
+<h1 style="text-align: center;">Profile</h1>
+<ul class="list-group">
+    <li class="list-group-item">User Name   : {{ this.user1.username }}</li>
+    <li class="list-group-item">First Name  : {{ this.user1.firstName}}</li>
+    <li class="list-group-item">Last Name   : {{ this.user1.lastName }}</li>
+    <li class="list-group-item">Email       : {{ this.user1.email }}</li>
+    <li class="list-group-item">Phone       : {{ this.user1.phone }}</li>
+    <li class="list-group-item">Address       : {{ this.user1.address }}</li>
+</ul>
+<button [routerLink]="['/user/edit-password/']" class="text-right" style="margin-left: 20px;" 
+    mat-raised-button color="primary">Change password</button>
+    <button [routerLink]="['/user/edit-address/']" class="text-right" style="margin-left: 20px;" 
+    mat-raised-button color="primary">Change address</button>

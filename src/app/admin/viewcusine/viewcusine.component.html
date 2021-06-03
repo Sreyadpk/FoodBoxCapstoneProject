@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="card-deck mb-3 text-center" *ngFor="let cusine of cusines">
+      <div class="card mb-4 box-shadow">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">{{ cusine.cusname }}</h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>Price : {{ cusine.price }}</li>
+            <li>Description : {{ cusine.description }}</li>
+            <li>Enabled : {{ cusine.enabled }}</li>
+            <li>Category : {{ cusine.category }}</li>
+            <li>Quantity : {{ cusine.quantity }}</li>
+          </ul>
+          <a [routerLink]="['/admin/update/',cusine.cusid]">Update</a>
+          <a [routerLink]="['/admin/remove/',cusine.cusid]">Remove</a>
+        </div>
+      </div>
+    </div>
+</div>

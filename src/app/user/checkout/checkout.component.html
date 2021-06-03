@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Checkout</h1>
+    <ol class="list-group" *ngFor="let item of cartitems">
+      <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">{{ item.cusine.cusname }}</div>
+            {{ item.quantity }} * {{ item.cusine.price }}
+        </div>
+      </li>
+    </ol>
+    <p>Total : {{ total }}</p>
+    <button type="submit" class="btn btn-sm btn-outline-primary float-right" [routerLink]="['/user/order-summary']"
+    color="primary">order</button>
+    <button type="submit" class="btn btn-sm btn-outline-primary float-right" style="margin-left: 20px;" (click)="goBack()"
+    color="primary">Go back</button>
+</div>
+<div class="container">
+  <h1> Order Address </h1>
+  <p> {{ user1.address }} </p>
+  <button type="submit" class="btn btn-sm btn-outline-primary float-right" style="margin-left: 20px;" [routerLink]="['/user/edit-address']"
+    color="primary">Edit Address</button>
+</div>  
+

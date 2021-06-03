@@ -1,0 +1,55 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-6 offset-md-3" >
+            <h1 class="text-center">Update Cusine</h1>
+            <div class="container">
+               <form (ngSubmit)="updCusine()">
+                <mat-form-field class="full-width" appearance="outline">
+                 <mat-label>Name</mat-label>
+                 <input required [(ngModel)]="cusine.cusname"
+                 name="name" matInput placeholder="Name">
+                </mat-form-field>
+
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Price</mat-label>
+                    <input required [(ngModel)]="cusine.price"
+                    name="price" matInput placeholder="Price">
+                </mat-form-field>
+
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Description</mat-label>
+                    <input required [(ngModel)]="cusine.description"
+                    name="description" matInput placeholder="Description">
+                </mat-form-field>
+
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Category</mat-label>
+                    <input required [(ngModel)]="cusine.category"
+                    name="category" matInput placeholder="Category">
+                </mat-form-field>
+
+                <mat-form-field class="full-width" appearance="outline">
+                  <mat-label>Quantity</mat-label>
+                  <input required [(ngModel)]="cusine.quantity"
+                  name="quantity" matInput placeholder="Quantity">
+                </mat-form-field>
+
+                <div class="full-width">
+                    <input required type="radio" value="true" name="enabled" [(ngModel)]="cusine.enabled">
+                    <label for="Enabled">Enabled</label><br>
+                    <input required type="radio" value="false" name="enabled" [(ngModel)]="cusine.enabled">
+                    <label for="Enabled">Disabled</label>
+                 </div>
+
+                <div class="container text-center">
+                 <button type="submit" mat-raised-button color="primary">Update Cusine</button>
+                 <button type="reset" style="margin-left: 20px;" mat-raised-button color="accent">Reset</button>
+                </div>
+              </form>
+            </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ 

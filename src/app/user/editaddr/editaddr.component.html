@@ -1,0 +1,23 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-6 offset-md-3" >
+            <h1 class="text-center">Edit Address</h1>
+            <div class="container">
+               <form (ngSubmit)="editAddress()">
+                <mat-form-field class="full-width" appearance="outline">
+                 <mat-label>Address</mat-label>
+                 <input required [(ngModel)]="this.user1.address"
+                 name="address" matInput placeholder="Enter address">
+                </mat-form-field>
+                <div class="container text-center">
+                 <button type="submit" mat-raised-button color="primary">Edit</button>
+                 <button type="reset" style="margin-left: 20px;" mat-raised-button color="accent">Reset</button>
+                </div>
+              </form>
+            </div>
+          </div>
+       </div>
+    </div>
+</div>
+ 

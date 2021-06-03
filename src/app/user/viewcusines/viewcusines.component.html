@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="input-group">
+      
+      <div class="form-outline">
+        <form #f=ngForm (ngSubmit)="search(f)">
+        <label class="form-label" for="form1">Search</label>
+        <input type="search" ngModel name="category" class="form-control" placeholder="Search By Category" />
+        <button type="submit" class="btn btn-primary">Search</button> 
+        </form>
+      </div>
+      
+    </div>
+    <div class="card-deck mb-3 text-center" *ngFor="let cusine of cusines">
+      <div class="card mb-4 box-shadow">
+        <div class="card-header">
+          <h4 class="my-0 font-weight-normal">{{ cusine.cusname }}</h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>Price : {{ cusine.price }}</li>
+            <li>Description : {{ cusine.description }}</li>
+            <li>Enabled : {{ cusine.enabled }}</li>
+            <li>Category : {{ cusine.category }}</li>
+            <li>Available Qty : {{ cusine.quantity }}</li>
+          </ul>
+            <button [routerLink]="['/user/addtocart/',cusine.cusid]" class="text-right" style="margin-left: 20px;" 
+             mat-raised-button color="primary">Add to cart</button>
+        </div>
+      </div>
+    </div>
+</div> 
