@@ -1,0 +1,9 @@
+node{
+    stage('Install node modules'){
+        sh 'npm install'
+    }
+
+    stage('build'){
+       sh 'npm run build --prod'
+    }
+}
